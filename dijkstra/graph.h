@@ -41,7 +41,7 @@ typedef struct Edge* Edge;
 unsigned global_id_count = 0;
 
 struct Edge {
-    unsigned weigth;
+    unsigned Weight;
     unsigned id_vertex;
     Edge next;
 };
@@ -102,7 +102,7 @@ void graph_add_vertex(Graph graph, char *label) {
 void vertex_add_edge(Vertex vertex,unsigned weight, unsigned id_vertex_dest) {
     Edge iterator = vertex->edges;
     Edge new_edge = malloc(sizeof(struct Edge));
-    new_edge->weigth = weight;
+    new_edge->Weight = weight;
     new_edge->id_vertex = id_vertex_dest;
     new_edge->next = NULL;
     if(iterator == NULL) {
@@ -181,7 +181,7 @@ void print_edges(Edge edges) {
     Edge iterator = edges;
     unsigned index = 0;
     while(iterator!=NULL) {
-        printf("\tedge %d : { weight : %3u, destination : %3u}\n", index, iterator->weigth, iterator->id_vertex);
+        printf("\tedge %d : { weight : %3u, destination : %3u}\n", index, iterator->Weight, iterator->id_vertex);
         iterator = iterator->next;
         index++;
     }

@@ -1,5 +1,9 @@
 5
-s a b c d
+s
+a
+b
+c
+d
 s 2
 a 10
 c 5

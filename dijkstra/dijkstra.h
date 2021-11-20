@@ -81,7 +81,7 @@ void dijkstra(Graph graph, char *label_start_vertex) {
         iterator_edge = min_vertex->edges;
         while(iterator_edge!=NULL) {
             neighbor = graph_find_vertex_by_id(graph, iterator_edge->id_vertex);
-            distance = min_vertex->distance + iterator_edge->weigth;
+            distance = min_vertex->distance + iterator_edge->Weight;
             if(distance < neighbor->distance) {
                 neighbor->distance = distance;
                 neighbor->predecessor = min_vertex;
