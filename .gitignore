@@ -1,2 +1,10 @@
-*/*.layout
-*/*.exe
+# project files
+
+*.fpj
+*.layout
+
+# compile files
+
+*.exe
+*.rc
+*.mak
